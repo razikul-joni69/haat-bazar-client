@@ -1,0 +1,14 @@
+table,
+th,
+td,
+tbody {
+    border: 1px;
+    padding: 5px;
+    text-align: center;
+}
+.edit{
+    cursor: pointer;
+}
+.delete{
+    cursor: pointer;
+}
