@@ -24,19 +24,19 @@ const Header = () => {
                     <Link className="nav-link " to="/deals">
                         Deals
                     </Link>
-                    {/* {loggedInUser.name || loggedInUser.displayName ? (
+                    {loggedInUser.name || loggedInUser.displayName ? (
                         <Link className="nav-link text-warning" to="/user">
                             {" "}
                             {loggedInUser.name || loggedInUser.displayName}
                         </Link>
-                    ) : ( */}
+                    ) : (
                         <Link
                             className="nav-link btn btn-primary btn-sm"
                             to="/login"
                         >
                             Login
                         </Link>
-                    {/* )} */}
+                    )}
                 </Nav>
             </Navbar>
         </div>

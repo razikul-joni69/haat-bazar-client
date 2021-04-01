@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 const Event = ({ event: product }) => {
     const history = useHistory();
     const handleBuy = (id) => {
-        history.push(`/orders/${id}`);
+        history.push(`/checkout/${id}`);
     };
     return (
         <div className="col-sm-12 col-md-4 col-xl-3 col-xl-2 mt-3">

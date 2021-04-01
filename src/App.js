@@ -5,6 +5,7 @@ import { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Admin from "./components/Admin/Admin";
+import CheckOut from "./components/CheckOut/CheckOut";
 import Deals from "./components/Deals/Deals";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -27,12 +28,15 @@ function App() {
                         <Route path="/home">
                             <Home />
                         </Route>
-                        <PrivateRoute path="/orders/:productId">
+                        {/* <PrivateRoute path="/orders/:productId">
+                            <Orders />
+                        </PrivateRoute> */}
+                        <PrivateRoute path="/orders">
                             <Orders />
                         </PrivateRoute>
-                        <Route path="/orders">
-                            <Orders />
-                        </Route>
+                        <PrivateRoute path="/checkout/:productId">
+                            <CheckOut></CheckOut>
+                        </PrivateRoute>
                         <Route path="/admin">
                             <Admin />
                         </Route>

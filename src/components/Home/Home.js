@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import Product from "../Product/Product";
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -11,6 +12,11 @@ const Home = () => {
     return (
         <div className="container">
             <div className="row">
+                {products.length === 0 && (
+                    <div className="text-center">
+                        <Spinner animation="border" variant="warning" />
+                    </div>
+                )}
                 {products.map((product) => (
                     <Product key={product._id} event={product}></Product>
                 ))}
