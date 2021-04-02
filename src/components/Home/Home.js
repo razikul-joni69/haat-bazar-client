@@ -5,18 +5,19 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5055/products")
+        fetch("https://afternoon-basin-49374.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, []);
     return (
         <div className="container">
-            <div className="row">
-                {products.length === 0 && (
-                    <div className="text-center">
+            {products.length === 0 && (
+                    <div className="text-center mt-5">
                         <Spinner animation="border" variant="warning" />
                     </div>
                 )}
+            <div className="row">
+                
                 {products.map((product) => (
                     <Product key={product._id} event={product}></Product>
                 ))}

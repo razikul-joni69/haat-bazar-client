@@ -21,25 +21,21 @@ function App() {
     return (
         <div className="background-img">
             <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-                <h2>Login {loggedInUser.email}</h2>
                 <Router>
                     <Header></Header>
                     <Switch>
                         <Route path="/home">
                             <Home />
                         </Route>
-                        {/* <PrivateRoute path="/orders/:productId">
-                            <Orders />
-                        </PrivateRoute> */}
                         <PrivateRoute path="/orders">
                             <Orders />
                         </PrivateRoute>
                         <PrivateRoute path="/checkout/:productId">
                             <CheckOut></CheckOut>
                         </PrivateRoute>
-                        <Route path="/admin">
+                        <PrivateRoute path="/admin">
                             <Admin />
-                        </Route>
+                        </PrivateRoute>
                         <Route path="/deals">
                             <Deals />
                         </Route>
@@ -49,12 +45,6 @@ function App() {
                         <Route path="/login">
                             <Login />
                         </Route>
-                        {/* <Route path="/manageProduct">
-                            <ManageProduct />
-                        </Route>
-                        <Route path="/addProduct">
-                            <AddProduct/>
-                        </Route> */}
                         <Route exact path="/">
                             <Home />
                         </Route>

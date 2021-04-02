@@ -131,7 +131,7 @@ function Login() {
                                 setNewUser(!newUser);
                             }}
                         >
-                            <Link to='' className="">
+                            <Link to='/login' className="">
                                 {newUser ? " Sign In" : "Sign Up"}
                             </Link>{" "}
                         </div>

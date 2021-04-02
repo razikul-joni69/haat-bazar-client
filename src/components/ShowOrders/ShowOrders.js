@@ -1,16 +1,33 @@
-import React from 'react';
+import React from "react";
+import "./ShowOrder.css";
 
 const ShowOrders = (props) => {
-    // console.log(props.order);
-    const {name, price, weight, date, email} = props.order;
+    const { name, price, weight, date, email } = props.order;
     return (
         <div>
-            
             <div className="d-flex justify-content-between">
-                <h4 className="text-center">{name}</h4>
-                <h4>{weight}</h4>
-                <h4>{price}</h4>
-                <h4>{new Date(date).toDateString('dd/mm/yyyy')}</h4>
+                <table className="">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>{name}</h4>
+                        </td>
+
+                        <td>
+                            <h4>{weight}</h4>
+                        </td>
+
+                        <td>
+                            <h4>{price}</h4>
+                        </td>
+                        <td>
+                            <h4>
+                                {new Date(date).toDateString("dd/mm/yyyy/time")}
+                            </h4>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     );

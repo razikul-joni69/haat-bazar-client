@@ -7,14 +7,13 @@ const ManageProduct = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5055/products")
+        fetch("https://afternoon-basin-49374.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, []);
 
     function deleteEvent(id) {
-        console.log("deleteEvent clicked", id);
-        fetch(`http://localhost:5055/delete/${id}`, {
+        fetch(`https://afternoon-basin-49374.herokuapp.com/delete/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

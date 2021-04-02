@@ -2,7 +2,7 @@ table,
 th,
 td,
 tbody {
-    border: 1px;
+    border: 1px solid grey;
     padding: 5px;
     text-align: center;
 }

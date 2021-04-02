@@ -14,7 +14,7 @@ const AddProduct = () => {
             weight: data.weight,
             imageURL: imageURL,
         };
-        const url = `http://localhost:5055/addEvent`;
+        const url = `https://afternoon-basin-49374.herokuapp.com/addEvent`;
 
         fetch(url, {
             method: "POST",
